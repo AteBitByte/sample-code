@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+	.hexagon
+	{
+		position: relative;
+		margin: 0 auto;
+		background: black;
+		border-radius: 10px;
+		height: 75px;
+		width: 50px;
+		box-sizing: border-box;
+		transition: all 1s;
+		border: 10px solid;
+		border-top-color: black;
+		border-bottom-color: black;
+		/* Required to keep top from being cut off */
+		margin-top: 10px;
+		/* Required for point to be at top/bottom */
+		transform: rotate(90deg);
+	}
+	
+	.hexagon:before,
+	.hexagon:after
+	{
+		content: "";
+		border: inherit;
+		position: absolute;
+		top: -10px;
+		left: -10px;
+		background: inherit;
+		border-radius: inherit;
+		height: 100%;
+		width: 100%;
+	}
+	
+	.hexagon:before { transform: rotate(60deg); }
+	.hexagon:after { transform: rotate(-60deg); }
+</style>
+</head>
+
+<body style="background-color: grey">
+
+<div class="hexagon" />
+
+</body>
+</html>
